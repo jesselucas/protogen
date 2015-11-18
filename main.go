@@ -31,7 +31,7 @@ func main() {
 	}
 
 	// usage description
-	usage := "protogen /path_to_proto"
+	usage := "protogen /path/to/myService.proto"
 	options := "--version (-v)"
 	optionsDesc := versionUsage
 

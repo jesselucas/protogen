@@ -11,4 +11,4 @@ Must have [protocol buffer compiler](https://github.com/google/protobuf) install
 
 Then run
 
-`protogen myService.proto`
+`protogen /path/to/myService.proto`
