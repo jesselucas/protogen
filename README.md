@@ -5,4 +5,10 @@ Simple script to generate gRPC-Go interface
 `go get -u github.com/jesselucas/protogen`
 
 ## Usage
-protogen /path_to_proto_file
+Must have [protocol buffer compiler](https://github.com/google/protobuf) installed. For OS X, I recommend using [Homebrew](http://brew.sh/):
+
+`brew install protobuf`
+
+Then run
+
+`protogen myService.proto`
