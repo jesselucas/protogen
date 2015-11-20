@@ -51,7 +51,9 @@ func main() {
 	protoPath := os.Args[1]
 
 	// run protoc command (protoc --go_out=plugins=grpc:. $proto)
-	err := executil.CmdStart("protoc", "--go_out=plugins=grpc:.", protoPath)
+	cmd := executil.Command("protoc", "--go_out=plugins=grpc:.", protoPath)
+	cmd.OutputPrefix = "protoc"
+	err := cmd.StartAndWait()
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
