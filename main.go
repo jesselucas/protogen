@@ -9,7 +9,7 @@ import (
 )
 
 // Semantic Version
-const VERSION = "0.0.2"
+const Version = "0.0.3"
 
 const space = "  " // Used for pretty printing
 const br = "\n\n"
@@ -17,7 +17,7 @@ const br = "\n\n"
 func main() {
 	// Check for our command line configuration flags
 	var (
-		versionUsage = "Prints current version" + " (v. " + VERSION + ")"
+		versionUsage = "Prints current version" + " (v. " + Version + ")"
 		versionPtr   = flag.Bool("version", false, versionUsage)
 	)
 
@@ -26,7 +26,7 @@ func main() {
 	flag.Parse()
 
 	if *versionPtr {
-		fmt.Println(VERSION)
+		fmt.Println(Version)
 		os.Exit(0)
 	}
 
